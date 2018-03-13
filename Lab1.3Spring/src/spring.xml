@@ -1,0 +1,33 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+     http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+     http://www.springframework.org/schema/context
+     http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+	
+	<bean id="sbu" class="com.cg.dto.SBU">
+	<property name="sbuCode" value="1001"></property>
+	<property name="sbuName" value="Kiran rao"></property>
+	<property name="sbuHead" value="Product Engineering services"></property>
+	<property name="emp">
+	<list>
+	<ref bean="one"/>
+	<ref bean="two"/>
+	</list>
+	</property>
+	</bean>
+	
+	<bean id="one" class="com.cg.dto.Employee">
+	<property name="empId" value="142735"></property>
+	<property name="empName" value="Namrata Mehta"></property>
+	<property name="sal" value="14500"></property>
+	</bean>	 
+	
+	<bean id="two" class="com.cg.dto.Employee">
+	<property name="empId" value="142865"></property>
+	<property name="empName" value="Poorwa Kumbhaj"></property>
+	<property name="sal" value="14500"></property>
+	</bean>	
+	
+	 
+</beans>
